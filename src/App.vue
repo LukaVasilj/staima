@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Staima</h1>
+  <input type="text" name="email" v-model="email" /> <br />
+  <input type="text" name="password" v-model="password" /> <br />
+  <button v-on:click="addUser()">Add New User</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    addUser() {
+      console.warn("function called",this.email,this.password);
+    },
+  },
+};
 </script>
 
 <style>
